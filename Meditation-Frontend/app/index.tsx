@@ -48,7 +48,7 @@ const App = () => {
                                 .springify(20)}
                         >
                             <Text className="text-center text-white font-bold text-4xl">
-                                Simple Meditation
+                                Yogo Vidya
                             </Text>
                             <Text className="text-center text-white font-regular text-2xl mt-3">
                                 Simplifying Meditation for Everyone
