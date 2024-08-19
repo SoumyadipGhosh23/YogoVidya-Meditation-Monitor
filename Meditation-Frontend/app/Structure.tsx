@@ -1,4 +1,5 @@
 import TimerProvider from "@/context/TimerContext";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
@@ -28,6 +29,7 @@ export default function Structure() {
   if (!fontsLoaded) {
     return null;
   }
+
 
   return (
       <SafeAreaProvider>

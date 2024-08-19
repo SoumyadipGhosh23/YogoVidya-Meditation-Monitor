@@ -21,7 +21,7 @@ const Page = () => {
                 style={{ paddingTop: insets.top }}
             >
                 <ScrollView showsVerticalScrollIndicator={false}>
-                    <Text className="text-zinc-50 text-3xl font-bold">
+                    <Text className="text-zinc-50 text-3xl font-bold mt-5">
                         Change your beliefs with affirmations
                     </Text>
                     <View>
