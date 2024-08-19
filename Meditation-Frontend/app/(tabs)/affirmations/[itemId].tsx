@@ -1,4 +1,4 @@
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { GalleryPreviewData } from "@/constants/models/AffirmationCategory";
 import { router, useLocalSearchParams } from "expo-router";
 import {
@@ -54,9 +54,9 @@ const AffirmationPractice = () => {
                 <AppGradient colors={["rgba(0,0,0,0.3)", "rgba(0,0,0,0.9)"]}>
                     <Pressable
                         onPress={() => router.back()}
-                        className="absolute top-16 left-6 z-10"
+                        className="absolute top-10 left-5 z-10"
                     >
-                        <AntDesign name="leftcircleo" size={50} color="white" />
+                        <Ionicons name="arrow-back-circle-outline" size={40} color="white" />
                     </Pressable>
 
                     <ScrollView

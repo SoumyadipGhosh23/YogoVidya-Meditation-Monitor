@@ -1,7 +1,7 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
 import { router } from "expo-router";
-import React from "react";
+import React, { useEffect } from "react";
 import {
     FlatList,
     ImageBackground,
@@ -19,8 +19,19 @@ import AppGradient from "@/components/AppGradient";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import { AntDesign } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useSelector } from "react-redux";
 
 const Page = () => {
+    const userName = useSelector((state: any) => state.auth.userName);
+    useEffect(() => {
+        (async()=>{
+            if(!userName){
+                await AsyncStorage.removeItem("accessToken");
+                await AsyncStorage.removeItem("refreshToken");
+                router.push("/");
+            }
+        })();   
+    }, [userName]);
     return (
         <ProtectedRoute>
             <View className="flex-1">
@@ -31,7 +42,7 @@ const Page = () => {
                     <View style={{display : "flex", flexDirection : "row", justifyContent : "space-between", paddingRight: 5}}>
                         <View className="mb-6">
                             <Text className="text-gray-200 mb-3 font-bold text-4xl text-left">
-                                Welcome Soumyadip
+                                Welcome Back, {userName}
                             </Text>
                             <Text className="text-indigo-100 text-xl font-medium">
                                 Start your meditation practice today

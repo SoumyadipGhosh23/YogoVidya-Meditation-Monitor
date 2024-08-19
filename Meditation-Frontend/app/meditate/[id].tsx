@@ -2,7 +2,7 @@ import AppGradient from "@/components/AppGradient";
 import { router, useLocalSearchParams } from "expo-router";
 import React, { useContext, useEffect, useState } from "react";
 import { ImageBackground, Pressable, Text, View } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { Audio } from "expo-av";
 import CustomButton from "@/components/CustomButton";
 
@@ -120,9 +120,9 @@ const Page = () => {
                 <AppGradient colors={["transparent", "rgba(0,0,0,0.8)"]}>
                     <Pressable
                         onPress={() => router.back()}
-                        className="absolute top-16 left-6 z-10"
+                        className="absolute top-10 left-5 z-10"
                     >
-                        <AntDesign name="leftcircleo" size={50} color="white" />
+                        <Ionicons name="arrow-back-circle-outline" size={40} color="white" />
                     </Pressable>
 
                     <View className="flex-1 justify-center">

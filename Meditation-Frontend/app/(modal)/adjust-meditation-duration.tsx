@@ -1,7 +1,7 @@
 import AppGradient from "@/components/AppGradient";
 import CustomButton from "@/components/CustomButton";
 import { TimerContext } from "@/context/TimerContext";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import React, { useContext } from "react";
 import { Pressable, Text, View } from "react-native";
@@ -22,9 +22,9 @@ const AdjustMeditationDuration = () => {
             >
                 <Pressable
                     onPress={() => router.back()}
-                    className="absolute top-8 left-6 z-10"
+                    className="absolute top-10 left-5 z-10"
                 >
-                    <AntDesign name="leftcircleo" size={50} color="white" />
+                    <Ionicons name="arrow-back-circle-outline" size={40} color="white" />
                 </Pressable>
                 <View className="justify-center h-4/5">
                     <View>
